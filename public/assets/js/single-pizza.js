@@ -14,14 +14,7 @@ function printPizza(pizzaData) {
 
   pizzaId = pizzaData._id;
 
-  const {
-    pizzaName,
-    createdBy,
-    createdAt,
-    size,
-    toppings,
-    comments
-  } = pizzaData;
+  const { pizzaName, createdBy, createdAt, size, toppings, comments } = pizzaData;
 
   $pizzaName.textContent = pizzaName;
   $createdBy.textContent = createdBy;
@@ -93,10 +86,7 @@ function handleNewCommentSubmit(event) {
     return false;
   }
 
-  const formData = {
-    commentBody,
-    writtenBy
-  };
+  const formData = { commentBody, writtenBy };
 }
 
 function handleNewReplySubmit(event) {
@@ -115,13 +105,10 @@ function handleNewReplySubmit(event) {
     return false;
   }
 
-  const formData = {
-    writtenBy,
-    replyBody
-  };
+  const formData = { writtenBy, replyBody };
 }
 
-$backBtn.addEventListener('click', function () {
+$backBtn.addEventListener('click', function() {
   window.history.back();
 });
 
